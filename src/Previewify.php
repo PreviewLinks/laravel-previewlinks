@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Http;
 
 class Previewify
 {
-    const API_BASE_URL = 'https://previewify.app/api/v1';
+    public const API_BASE_URL = 'https://previewify.app/api/v1';
 
-    const GENERATE_BASE_URL = 'https://previewify.app/generate';
+    public const GENERATE_BASE_URL = 'https://previewify.app/generate';
 
     public function http(): PendingRequest
     {

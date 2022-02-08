@@ -2,9 +2,9 @@
 
 namespace Flowframe\Previewify\Tests;
 
+use Flowframe\Previewify\PreviewifyServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Flowframe\Previewify\PreviewifyServiceProvider;
 
 class TestCase extends Orchestra
 {
