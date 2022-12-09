@@ -19,7 +19,7 @@
     verbose="true"
 >
     <testsuites>
-        <testsuite name="Flowframe Test Suite">
+        <testsuite name="PreviewLinks Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
