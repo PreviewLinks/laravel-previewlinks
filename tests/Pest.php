@@ -1,5 +1,5 @@
 <?php
 
-use Flowframe\Previewify\Tests\TestCase;
+use PreviewLinks\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
