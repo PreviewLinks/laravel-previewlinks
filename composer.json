@@ -9,12 +9,12 @@
         "laravel-previewify",
         "laravel-previewlinks"
     ],
-    "homepage": "https://github.com/flowframe/laravel-previewlinks",
+    "homepage": "https://github.com/PreviewLinks/laravel-previewlinks",
     "license": "MIT",
     "authors": [
         {
-            "name": "Lars Klopstra",
-            "email": "lars@flowframe.nl",
+            "name": "Logan Craft",
+            "email": "logan@previewlinks.io",
             "role": "Developer"
         }
     ],
