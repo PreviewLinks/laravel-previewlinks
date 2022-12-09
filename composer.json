@@ -1,12 +1,15 @@
 {
-    "name": "flowframe/laravel-previewify",
-    "description": "The official Laravel client for Previewify",
+    "name": "previewlinks/laravel-previewlinks",
+    "description": "The official Laravel client for PreviewLinks.io",
     "keywords": [
+        "PreviewLinks",
+        "Craft Enterprises",
         "Flowframe",
         "laravel",
-        "laravel-previewify"
+        "laravel-previewify",
+        "laravel-previewlinks"
     ],
-    "homepage": "https://github.com/flowframe/laravel-previewify",
+    "homepage": "https://github.com/flowframe/laravel-previewlinks",
     "license": "MIT",
     "authors": [
         {
@@ -34,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Flowframe\\Previewify\\": "src",
-            "Flowframe\\Previewify\\Database\\Factories\\": "database/factories"
+            "PreviewLinks\\": "src",
+            "PreviewLinks\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Flowframe\\Previewify\\Tests\\": "tests"
+            "PreviewLinks\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +57,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Flowframe\\Previewify\\PreviewifyServiceProvider"
+                "PreviewLinks\\PreviewLinksServiceProvider"
             ],
             "aliases": {
-                "Previewify": "Flowframe\\Previewify\\Facades\\Previewify"
+                "PreviewLinks": "PreviewLinks\\Facades\\PreviewLinks"
             }
         }
     },

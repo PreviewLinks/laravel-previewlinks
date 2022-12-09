@@ -1,20 +1,20 @@
 <?php
 
-namespace Flowframe\Previewify;
+namespace PreviewLinks;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 
-class Previewify
+class PreviewLinks
 {
-    public const API_BASE_URL = 'https://previewify.app/api/v1';
+    public const API_BASE_URL = 'https://previewlinks.io/api/v1';
 
-    public const GENERATE_BASE_URL = 'https://previewify.app/generate';
+    public const GENERATE_BASE_URL = 'https://previewlinks.io/generate';
 
     public function http(): PendingRequest
     {
-        return Http::withToken(config('previewify.api_token'))
+        return Http::withToken(config('previewlinks.api_token'))
             ->baseUrl(static::API_BASE_URL);
     }
 
@@ -47,7 +47,7 @@ class Previewify
         $signature = hash_hmac(
             'sha256',
             $base64Fields,
-            config('previewify.api_token'),
+            config('previewlinks.api_token'),
         );
 
         return static::GENERATE_BASE_URL . "/templates/{$templateId}/signed?fields={$base64Fields}&signature={$signature}";
