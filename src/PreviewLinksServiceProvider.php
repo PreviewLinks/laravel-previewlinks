@@ -1,16 +1,16 @@
 <?php
 
-namespace Flowframe\Previewify;
+namespace PreviewLinks;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class PreviewifyServiceProvider extends PackageServiceProvider
+class PreviewLinksServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-previewify')
+            ->name('laravel-previewlinks')
             ->hasConfigFile();
     }
 }

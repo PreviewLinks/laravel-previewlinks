@@ -1,30 +1,30 @@
-# Previewify for Laravel
+# PreviewLinks for Laravel
 
-This is the official [Previewify](https://previewify.app) client for Laravel.
+This is the official [PreviewLinks](https://previewlinks.io) client for Laravel.
 
 ## Installation
 
 You can install the package via Composer:
 
 ```bash
-composer require flowframe/laravel-previewify
+composer require previewlinks/laravel-previewlinks
 ```
 
 ## Usage
 
 ### Configuration
 
-You can set an API token in your `.env` by using `PREVIEWIFY_API_TOKEN`.
+You can set an API token in your `.env` by using `PREVIEWLINKS_API_TOKEN`.
 
 ```php
 return [
 
     /**
-     * Previewify API token
+     * PreviewLinks API token
      *
-     * Obtain one from https://previewify.app/app/account
+     * Obtain one from https://previewlinks.io/app/account
      */
-    'api_token' => env('PREVIEWIFY_API_TOKEN'),
+    'api_token' => env('PREVIEWLINKS_API_TOKEN'),
 
 ];
 ```
@@ -32,27 +32,27 @@ return [
 ### Methods
 
 ```php
-use Flowframe\Previewify\Previewify;
+use PreviewLinks\PreviewLinks;
 
-/** @var Previewify $previewify */
-$previewify = app(Previewify::class);
+/** @var PreviewLinks $previewlinks */
+$previewlinks = app(PreviewLinks::class);
 
-$sites = $previewify->listSites();
+$sites = $previewlinks->listSites();
 
-$site = $previewify->showSite(siteId: 1);
+$site = $previewlinks->showSite(siteId: 1);
 
-$siteTemplates = $previewify->listSiteTemplates(siteId: 1);
+$siteTemplates = $previewlinks->listSiteTemplates(siteId: 1);
 
 // This will return a JSON response with the image URL, the request may take 4 to 8 seconds to complete
-$downloadableImageUrl = $previewify->downloadImage(siteId: 1, templateId: 1, fields: [
-    'previewify:title' => 'Hello from Laravel',
-    'previewify:cta' => 'This is an example',
+$downloadableImageUrl = $previewlinks->downloadImage(siteId: 1, templateId: 1, fields: [
+    'previewlinks:title' => 'Hello from Laravel',
+    'previewlinks:cta' => 'This is an example',
 ]);
 
 // This method makes no API requests, we advise to use this over `downloadImage`
-$signedImageUrl = $previewify->signedImageUrl(templateId: 1, [
-    'previewify:title' => 'Hello from Laravel',
-    'previewify:cta' => 'This is an example',
+$signedImageUrl = $previewlinks->signedImageUrl(templateId: 1, [
+    'previewlinks:title' => 'Hello from Laravel',
+    'previewlinks:cta' => 'This is an example',
 ]);
 ```
 
@@ -62,7 +62,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
--   [Lars Klopstra](https://github.com/flowframe)
+-   [Logan Craft](https://github.com/craftlogan)
 -   [All Contributors](../../contributors)
 
 ## License
